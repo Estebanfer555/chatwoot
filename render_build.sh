@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Regenerar el binstub de bundle
+# Regenerar binstubs de Bundler
 bundle binstubs bundler --force
 
-# Preparar DB (Chatwoot)
+# Preparar la base de datos (propio de Chatwoot)
 bundle exec rails db:chatwoot_prepare
 
-# Compilar assets
+# Compilar los assets de Vite
 RAILS_ENV=production bin/vite build
