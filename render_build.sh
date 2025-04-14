@@ -8,12 +8,12 @@ bundle install
 echo "🛠️  Preparando base de datos"
 bundle exec rails db:prepare
 
-echo "🔧 Activando Corepack y configurando Yarn"
+echo "🔧 Activando Corepack y configurando PNPM"
 corepack enable
-corepack prepare yarn@stable --activate
+corepack prepare pnpm@10.2.0 --activate
 
-echo "📦 Instalando dependencias JS"
-yarn install
+echo "📦 Instalando dependencias JS con PNPM"
+pnpm install
 
 echo "⚡️ Build con Vite"
-vite build
+pnpm run build
